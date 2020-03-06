@@ -9,3 +9,11 @@ for index,row in corr_matrix['LOS'].iteritems():
         print(index, corr_matrix['LOS'][index])
 
 ```
+
+### Iterate each colums to drop which has null value more than xxx
+
+```
+for index, row in train.iteritems():
+    if(train[index].isnull().sum()>xxx):
+        train = train.drop([index],axis=1)
+```
