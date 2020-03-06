@@ -2,7 +2,7 @@
 
 ### Iterate each columns in a row to find specific value
 
-```
+```python
 for index,row in corr_matrix['LOS'].iteritems():
     if(corr_matrix['LOS'][index] < 0.01):
         train_var = train_var.drop([index],axis=1)
@@ -10,7 +10,7 @@ for index,row in corr_matrix['LOS'].iteritems():
 ```
 ### Iterate each columns to drop which has null value more than xxx
 
-```
+```python
 for index, row in train.iteritems():
     if(train[index].isnull().sum()>xxx):
         train = train.drop([index],axis=1)
@@ -18,7 +18,7 @@ for index, row in train.iteritems():
 
 ### Drop those rows or columns which are all null values
 
-```
+```python
 train = train.dropna(axis=1, how='all') # by columns
 train = train.dropna(axis=0, how='all') # by rows
 ```
